@@ -31,7 +31,7 @@ export default function Header() {
     <header className="border-b">
       <div className="max-w-4xl mx-auto p-5 flex items-center justify-between">
         <Link href="/" className="text-2xl font-bold flex items-center gap-3">
-        <Image src="/logo.png" alt="Shadowspace" width={50} height={50} />
+          <Image src="/logo.png" alt="Shadowspace" width={50} height={50} />
           Shadowspace
         </Link>
         <div className="flex items-center space-x-4">
@@ -60,7 +60,7 @@ export default function Header() {
           ) : (
             <Dialog>
               <DialogTrigger className="bg-white text-black cursor-pointer px-3 py-1.5 rounded-sm">
-                Login
+                Sign In
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
@@ -69,10 +69,17 @@ export default function Header() {
                     The magic links and passwordless login is coming soon
                   </DialogDescription>
                 </DialogHeader>
-                <Button className="cursor-pointer" onClick={() => signIn("google")}>
+                <Button
+                  className="cursor-pointer"
+                  onClick={() => signIn("google")}
+                >
                   <FcGoogle /> Continue with Google
                 </Button>
-                <Button className="cursor-pointer" disabled onClick={() => signIn("github")}>
+                <Button
+                  className="cursor-pointer"
+                  disabled
+                  onClick={() => signIn("github")}
+                >
                   <FaGithub /> Continue with Github
                 </Button>
               </DialogContent>
