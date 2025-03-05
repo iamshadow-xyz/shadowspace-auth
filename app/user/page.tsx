@@ -8,7 +8,7 @@ export default async function Users() {
   return (
     <div>
       <h1 className="mt-10 text-2xl font-bold">All Users ({users.length})</h1>
-      <div className="mt-8 grid grid-cols-2 gap-4">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
         {users.map((user) => (
           <div key={user.id}>
             <Card>

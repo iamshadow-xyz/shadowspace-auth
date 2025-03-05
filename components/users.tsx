@@ -12,7 +12,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 export default async function Users() {
   const users = await prisma.user.findMany();
   return (
-    <div className="mt-12 grid grid-cols-2 gap-4">
+    <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4">
       {users.map((user) => (
         <div key={user.id}>
           <Card>
