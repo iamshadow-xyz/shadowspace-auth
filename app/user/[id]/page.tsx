@@ -9,8 +9,7 @@ interface PageProps {
   params: { id: string };
 }
 
-export default async function Users({ params: params }: PageProps) {
-  const { id } = params;
+export default async function Users({ params: { id } }: PageProps) {
   const user = await prisma.user.findUnique({
     where: {
       id: id,
