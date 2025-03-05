@@ -50,6 +50,9 @@ export default function Header() {
                     <DropdownMenuLabel>My Account</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem>Profile</DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link href={"/settings"}>Settings</Link>
+                    </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => signOut()}>
                       Logout
                     </DropdownMenuItem>
