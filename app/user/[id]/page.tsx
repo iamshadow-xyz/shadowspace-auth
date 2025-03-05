@@ -5,11 +5,12 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-interface PageProps {
-  params: { id: string };
-}
-
-export default async function Users({ params: { id } }: PageProps) {
+export default async function Users({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
   const user = await prisma.user.findUnique({
     where: {
       id: id,
