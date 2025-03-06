@@ -37,7 +37,7 @@ export default function Header() {
         <div className="flex items-center space-x-4">
           {session ? (
             <>
-              <p>{session.user?.email}</p>
+              <p className="hidden md:block">{session.user?.email}</p>
               <div className="mr-10">
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
