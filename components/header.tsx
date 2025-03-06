@@ -80,7 +80,6 @@ export default function Header() {
                 </Button>
                 <Button
                   className="cursor-pointer"
-                  disabled
                   onClick={() => signIn("github")}
                 >
                   <FaGithub /> Continue with Github
